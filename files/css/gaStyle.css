@@ -1,0 +1,157 @@
+.wrap {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
+	position: relative;
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+	margin-top: 14px;
+}
+
+.mainWrap {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
+	position: relative;
+	height: 50px;
+	width: 50px;
+	margin-left: 120px;
+	/* margin-left: auto;
+	margin-right: auto; */
+	margin-top: 42px;
+}
+
+.cube {
+	position: relative;
+	width: 30px;
+	transform-style: preserve-3d;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.mainCube {
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.cube div {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.wrap.selected .cube div {
+	background: rgba(92, 245, 19, 0.1);
+}
+
+.mainCube div {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #121212;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.mainCube.started .wall {
+	box-shadow: 0px -12px 0px 0px rgba(0, 0, 0, 0.35) inset;
+}
+
+.back {
+	transform: translateZ(-15px) rotateY(180deg);
+}
+
+.right {
+	transform: rotateY(-270deg) translateX(15px);
+	transform-origin: top right;
+}
+
+.left {
+	transform: rotateY(270deg) translateX(-15px);
+	transform-origin: center left;
+}
+
+.top {
+	transform: rotateX(-90deg) translateY(-15px); /*-90deg*/
+	transform-origin: top center;
+}
+
+.bottom {
+	transform: rotateX(90deg) translateY(15px);
+	transform-origin: bottom center;
+}
+
+.front {
+	transform: translateZ(15px);
+}
+
+.mainCube .back {
+	transform: translateZ(-100px) rotateY(180deg);
+}
+
+.mainCube .right {
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+
+.mainCube .left {
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+}
+
+.mainCube .top {
+	transform: rotateX(-90deg) translateY(-100px); /*-90deg*/
+	transform-origin: top center;
+}
+
+.mainCube .bottom {
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+
+.mainCube .front {
+	transform: translateZ(100px);
+}
+
+.cube,.mainCube {
+	animation: spin 5s infinite linear;
+}
+
+.info {
+	font-size: 14px;
+	text-overflow: ellipsis;
+	/* Required for text-overflow to do anything */
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: -10px;
+}
+
+.mainBagInfo {
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.mainBagInfo .status {
+	color: #29335b;
+}
+
+.mainBagInfo .status.finish {
+	color: #369ee0;
+}
+
+.mainBagInfo .bestGene {
+	color: rgb(49, 132, 10);
+}
+
+@keyframes spin {
+	from { transform:rotateY(0);}
+    to {   transform: rotateY(360deg);}
+} 
+/* @keyframes spin {
+	from { transform:rotateY(0);}
+    to {   transform: rotateY(360deg);}
+} */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="UTF-8">
+<title>Knapsack GA</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="files/img/grapher_icon.jpg" />
+<script type="text/javascript"
+	src="files/libs/jquery/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="files/js/master.js"></script>
+<script type="text/javascript" src="files/js/variables.js"></script>
+<script type="text/javascript" src="files/js/DNA.js"></script>
+<script type="text/javascript" src="files/js/Population.js"></script>
+<script type="text/javascript" src="files/js/sketch.js"></script>
+<script type="text/javascript" src="files/js/file_handler.js"></script>
+<link rel="stylesheet" type="text/css" href="files/css/master.css" />
+<link rel="stylesheet" type="text/css" href="files/css/gaStyle.css" />
+</head>
+<body>
+	<div id="mainWrapper">
+		<div id="leftPanel">
+			<div id="leftPanelMenu"></div>
+			<div id="leftPanelIcon" onclick="closeOpenLeftPanel();">
+				<div class="slidePanelIcon"></div>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div id="pageHeader">
+				<div id="siteTitle">
+					<div class="mainTitle">Knapsack Problem</div>
+					<div class="subTitle">with Genetic Algorithms</div>
+				</div>
+			</div>
+			<div id="mainPageContainer"></div>
+			<div id="pageFooter">Ayham Jaradat @ AI 2016</div>
+		</div>
+	</div>
+	<div id="openFileContainer">
+		<div id="openFileDaialog">
+			<input type="file" id="files" name="files[]" multiple />
+			<div id="drop_zone">or Drop file here</div>
+			<!-- <output id="list"></output> -->
+			<div class="spinner">
+				<div class="loader"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
